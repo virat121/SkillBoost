@@ -169,6 +169,41 @@
   .header__left p {
       margin: 1rem 0 2.4rem;
   }
+  .header__right-image img{
+    opacity: 0.5;
+    
+    border-radius: 200px;
+  }
+
+  /* Style for the login and sign-up links in the navigation */
+.nav__auth {
+    display: flex;
+    align-items: center;
+}
+
+.nav__auth-link {
+    color: var(--color-white);
+    margin-right: 1rem;
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.nav__auth-link--signup {
+    background: var(--color-primary);
+    padding: 0.8rem 1.5rem;
+    border-radius: 1.2rem;
+    transition: var(--transition);
+}
+
+.nav__auth-link--signup:hover {
+    background: var(--color-bg2);
+    color: var(--color-white);
+}
+
+
+
+
   
   /* ######  Responsive NavMenu #### */
   /* Media Queries for Tablets */
@@ -296,6 +331,7 @@
         margin-bottom: 2rem;
       }
     }
+
   
   
   /* #### Categories Section */
