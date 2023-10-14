@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>EventSphere</title>
         <link rel="stylesheet" href="./css/styles1.css">
+        <link rel="stylesheet" href="./css/login.css">
 
         <!-- ICONSCOUT LINK -->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
@@ -38,20 +39,23 @@
                     <li><a href="about.html">About us</a></li>
                 </ul>
                 <div class="nav__auth">
-                    <a href="login.html" class="nav__auth-link">Login</a>
-                    <a href="signup.html" class="nav__auth-link nav__auth-link--signup">Sign Up</a>
-                </div>
+                    <a href="javascript:void(0);" class="nav__auth-link" onclick="openLoginOverlay()">Login</a>
+                    <a href="javascript:void(0);" class="nav__auth-link nav__auth-link--signup" onclick="openSignupOverlay()">Sign Up</a>
+                  </div>                  
                 <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
                 <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
             </div>
         </nav>
+
 
         <!-- HEADER -->
         <header>
             <div class="container header__container">
                 <div class="header__left">
                     <h1>Lear | Grow | Succeed With SkillBoost!!</h1>
-                    <p> Are you seeking to enhance your skills and secure meaningful employment? SkillBoost is here to help you on your journey to success. We offer a range of tools and resources to empower you with the skills needed to thrive in the job market.</p>
+                    <p> Are you seeking to enhance your skills and secure meaningful employment? SkillBoost is here to
+                        help you on your journey to success. We offer a range of tools and resources to empower you with
+                        the skills needed to thrive in the job market.</p>
                     <a href="courses.html" class="btn btn-primary">Get Started</a>
                 </div>
                 <div class="header__right">
@@ -66,115 +70,137 @@
         <!-- New Categories section -->
         <section class="categories">
             <div class="container categories__container">
-              <div class="categories__left">
-                <h1>Courses</h1>
-                <p>SkillBoost provides a wide range of diverse courses to meet your learning needs. We believe that education should be accessible to everyone, and our courses reflect this commitment. Here's an overview of the different categories of courses we offer:</p>
-                
-              </div>
-              <div class="categories__right">
-                <article class="category">
-                  <span class="category__icon"><img src="./logo/python.png" alt=""></span>
-                  <h5>Python Complete Course</h5>
-                  <p>
-                    "Explore Python's potential with SkillBoost. Learn coding, automation, and software development. Unlock a world of possibilities for your career."</p>
-                </article>
-                <article class="category">
-                    <span class="category__icon"><img src="./logo/development.png" alt=""></span>
-                    <h5>Web Develooment</h5>
-                    <p>"Master web development with SkillBoost, from HTML to full-stack, create websites, digital experiences, and enhance your digital skillset today."</p>
-                  </article>
-                  
-                  <article class="category">
-                    <span class="category__icon"><img src="./logo/artificial-intelligence.png" alt=""></span>
-                    <h5>Artifical Intelegence</h5>
-                    <p>"Discover the future with our AI courses. From machine learning to neural networks, explore the world of AI and gain valuable skills for the digital age."</p>
-                  </article>
+                <div class="categories__left">
+                    <h1>Courses</h1>
+                    <p>SkillBoost provides a wide range of diverse courses to meet your learning needs. We believe that
+                        education should be accessible to everyone, and our courses reflect this commitment. Here's an
+                        overview of the different categories of courses we offer:</p>
 
-                  <article class="category">
-                    <span class="category__icon"><img src="./logo/deep-learning.png" alt=""></span>
-                    <h5>Blockchain</h5>
-                    <p>"Dive into Blockchain technology at SkillBoost. Understand distributed ledgers, cryptocurrencies, and smart contracts, unlocking a world of decentralized possibilities"</p>
-                  </article>
-                  <article class="category">
-                    <span class="category__icon"><img src="./logo/robotic-hand.png" alt=""></span>
-                    <h5>Technology & Innovation</h5>
-                    <p>"Embrace technology and innovation at SkillBoost. Discover the latest advancements and spark your creativity in the ever-evolving digital landscape"</p>
-                  </article>
-                  
-          
-                  <article class="category">
-                    <span class="category__icon"><img src="./logo/business.png" alt=""></span>
-                    <h5>Business & Entrepreneurship</h5>
-                    <p>"Foster business acumen and entrepreneurial spirit with SkillBoost. Explore marketing, finance, and entrepreneurship, unlocking opportunities for growth and success."</p>
-                  </article>
-                  
-                  
+                </div>
+                <div class="categories__right">
+                    <article class="category">
+                        <span class="category__icon"><img src="./logo/python.png" alt=""></span>
+                        <h5>Python Complete Course</h5>
+                        <p>
+                            "Explore Python's potential with SkillBoost. Learn coding, automation, and software
+                            development. Unlock a world of possibilities for your career."</p>
+                        <a href="register.html" class="btn btn-primary btn-register">Register</a>
+                    </article>
+                    <article class="category">
+                        <span class="category__icon"><img src="./logo/development.png" alt=""></span>
+                        <h5>Web Development</h5>
+                        <p>"Master web development with SkillBoost, from HTML to full-stack, create websites, digital
+                            experiences, and enhance your digital skillset today."</p>
+                        <a href="register.html" class="btn btn-primary btn-register">Register</a>
+                    </article>
+
+                    <article class="category">
+                        <span class="category__icon"><img src="./logo/artificial-intelligence.png" alt=""></span>
+                        <h5>Artifical Intelegence</h5>
+                        <p>"Discover the future with our AI courses. From machine learning to neural networks, explore
+                            the world of AI and gain valuable skills for the digital age."</p>
+                        <a href="register.html" class="btn btn-primary btn-register">Register</a>
+                    </article>
+
+                    <article class="category">
+                        <span class="category__icon"><img src="./logo/deep-learning.png" alt=""></span>
+                        <h5>Blockchain</h5>
+                        <p>"Dive into Blockchain technology at SkillBoost. Understand distributed ledgers,
+                            cryptocurrencies, and smart contracts, unlocking a world of decentralized possibilities"</p>
+                        <a href="register.html" class="btn btn-primary btn-register">Register</a>
+                    </article>
+                    <article class="category">
+                        <span class="category__icon"><img src="./logo/robotic-hand.png" alt=""></span>
+                        <h5>Technology & Innovation</h5>
+                        <p>"Embrace technology and innovation at SkillBoost. Discover the latest advancements and spark
+                            your creativity in the ever-evolving digital landscape"</p>
+                        <a href="register.html" class="btn btn-primary btn-register">Register</a>
+                    </article>
+
+
+                    <article class="category">
+                        <span class="category__icon"><img src="./logo/business.png" alt=""></span>
+                        <h5>Business & Entrepreneurship</h5>
+                        <p>"Foster business acumen and entrepreneurial spirit with SkillBoost. Explore marketing,
+                            finance, and entrepreneurship, unlocking opportunities for growth and success."</p>
+                        <a href="register.html" class="btn btn-primary btn-register">Register</a>
+                    </article>
+
+
                 </div>
 
-                <a href="#" class="btn btn-primary">Learn More</a>            </div>
-            </section>
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+        </section>
 
-            <!-- <div id="form-overlay" style="display: none;">
-              <div id="registration-form">
-                <h3>Event Registration Form</h3>
-                <form id="registration-form">
-                   Form fields go here -->
-                  <!-- <label for="name">Name:</label>
-                  <input type="text" id="name" required>
-            
-                  <label for="email">Email:</label>
-                  <input type="email" id="email" required>
-            
-                  <label for="contact">Contact:</label>
-                  <input type="tel" id="contact" required>
-            
-                  <button type="submit">Submit</button>
-                </form>
-              </div>
-            </div> --> 
-            
-            
-     <!-- FOOTER SECTION -->
+        <!-- FOOTER SECTION -->
 
-     <!-- FOOTER SECTION -->
-<footer class="footer">
-    <div class="container footer__container">
-        <div class="footer__1">
-            <a href="index.html" class="footer_logo">
-                <h4>&copy SkillBoost</h4>
-            </a>
-            <p>
-                SkillBoost is your gateway to a world of knowledge and skills. Our mission is to empower you with the
-                best
-                courses and educational resources. Join us in the journey of learning and growth.
-            </p>
-        </div>
-        <div class="footer__2">
-            <h4>Quick Links</h4>
-            <ul class="permalinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="progress.html">Progress</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer__3">
-            <h4>Follow Us</h4>
-            <ul class="footer__socials">
-                <li><a href="#"><i class="uil uil-facebook-f"></i></a></li>
-                <li><a href="#"><i class="uil uil-instagram-alt"></i></a></li>
-                <li><a href="#"><i class="uil uil-twitter"></i></a></li>
-                <li><a href="#"><i class="uil uil-linkedin-alt"></i></a></li>
-            </ul>
-        </div>
+        <!-- FOOTER SECTION -->
+        <footer class="footer">
+            <div class="container footer__container">
+                <div class="footer__1">
+                    <a href="index.html" class="footer_logo">
+                        <h4>&copy SkillBoost</h4>
+                    </a>
+                    <p>
+                        SkillBoost is your gateway to a world of knowledge and skills. Our mission is to empower you
+                        with the
+                        best
+                        courses and educational resources. Join us in the journey of learning and growth.
+                    </p>
+                </div>
+                <div class="footer__2">
+                    <h4>Quick Links</h4>
+                    <ul class="permalinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="progress.html">Progress</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer__3">
+                    <h4>Follow Us</h4>
+                    <ul class="footer__socials">
+                        <li><a href="#"><i class="uil uil-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="uil uil-instagram-alt"></i></a></li>
+                        <li><a href="#"><i class="uil uil-twitter"></i></a></li>
+                        <li><a href="#"><i class="uil uil-linkedin-alt"></i></a></li>
+                    </ul>
+                </div>
 
-        <div class="footer__copyright">
-            <small>&copy; 2023 SkillBoost</small>
-        </div>
+                <div class="footer__copyright">
+                    <small>&copy; 2023 SkillBoost</small>
+                </div>
+            </div>
+        </footer>
+
+
+               <!-- login and sign up form -->
+   <!-- Add these elements at the end of your HTML body -->
+<div id="login-overlay" class="overlay">
+    <div class="overlay-content">
+      <span class="close" onclick="closeOverlay('login-overlay')">&times;</span>
+      <h2>Login</h2>
+      <form>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <button type="submit">Login</button>
+      </form>
     </div>
-</footer>
-
+  </div>
+  
+  <div id="signup-overlay" class="overlay">
+    <div class="overlay-content">
+      <span class="close" onclick="closeOverlay('signup-overlay')">&times;</span>
+      <h2>Sign Up</h2>
+      <form>
+        <input type="text" placeholder="Username">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
 
     </body>
 
