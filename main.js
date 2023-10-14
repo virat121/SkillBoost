@@ -25,32 +25,18 @@ const closeNav  = () =>{
 
 closeBtn.addEventListener('click',closeNav);
 
-function openRegistrationForm(eventId) {
-    // Display the form overlay and blur the content
-    var formOverlay = document.getElementById("form-overlay");
-    var webpageContent = document.body;
-    formOverlay.style.display = "flex";
-    webpageContent.classList.add("blur");
-  
-    // Set the event name in the form (assuming the event name is available)
-    var eventName = ""; // Provide the event name based on the event ID
-    document.getElementById("event-name").textContent = eventName;
-  
-    // Prevent scrolling of the webpage when the form is open
-    document.body.style.overflow = "hidden";
+
+  // Function to open the login overlay
+  function openLoginOverlay() {
+    document.getElementById('login-overlay').style.display = 'flex';
   }
-  
-  // Submit event registration form
-  document.getElementById("registration-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    
-    // Perform form submission logic here
-  
-    // Hide the form overlay, show webpage content, and allow scrolling
-    var formOverlay = document.getElementById("form-overlay");
-    var webpageContent = document.body;
-    formOverlay.style.display = "none";
-    webpageContent.classList.remove("blur");
-    document.body.style.overflow = "auto";
-  });
-  
+
+  // Function to open the sign-up overlay
+  function openSignupOverlay() {
+    document.getElementById('signup-overlay').style.display = 'flex';
+  }
+
+  // Function to close overlays
+  function closeOverlay(id) {
+    document.getElementById(id).style.display = 'none';
+  }
